@@ -5,6 +5,7 @@ jobs:
   import_risk:
     name: Import risk
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - name: Checkout
         uses: actions/checkout@v3
