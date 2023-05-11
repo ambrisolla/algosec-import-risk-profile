@@ -13,5 +13,7 @@ jobs:
 
       - name: Execute import
         env:
-          ALGOSEC_SERVER: ${{vars.ALGOSEC_SERVER}}
+          ALGOSEC_SERVER: ${{ vars.ALGOSEC_SERVER }}
+          ALGOSEC_USERNAME: ${{ vars.ALGOSEC_USERNAME }}
+          ALGOSEC_PASSWORD: ${{ secrets.ALGOSEC_PASSWORD }}
         run: set
