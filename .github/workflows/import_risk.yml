@@ -1,7 +1,6 @@
 name: Import Algosec risk
 on: workflow_dispatch
 
-
 jobs:
   import_risk:
     name: Import risk
@@ -10,6 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Create Python venv
+        run: python -m venv venv
 
       - name: Execute import
         env:
