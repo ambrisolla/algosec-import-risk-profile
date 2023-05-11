@@ -1,29 +1,31 @@
 name: Import Algosec risk
-on: workflow_dispatch
+on:
+  pull_request:
+    branches: ["main"]
 
 jobs:
-    import_risk:
-        name: Import risk
-        runs-on: self-hosted
-        environment: prod
-        steps:
-        - name: Checkout
-          uses: actions/checkout@v3
+  import_risk:
+    if: github.event.pull_request.merged == true
+    name: Import risk
+    runs-on: self-hosted
+    environment: prod
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-        - name: Configure Python virtual environment ( venv )
-          run: |
-              python3 -m venv venv
-              source venv/bin/activate
-              python3 -m pip install --upgrade pip
-              pip3 install -r requirements.txt
+      - name: Configure Python virtual environment ( venv )
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+          python3 -m pip install --upgrade pip
+          pip3 install -r requirements.txt
 
-        - name: Import risk
-          env:
-              ALGOSEC_SERVER: ${{ vars.ALGOSEC_SERVER }}
-              ALGOSEC_USERNAME: ${{ vars.ALGOSEC_USERNAME }}
-              ALGOSEC_PASSWORD: ${{ secrets.ALGOSEC_PASSWORD }}
-          run: |
-              source venv/bin/activate
-              ./run.py
-            
-    
+      - name: Import risk
+        env:
+          ALGOSEC_SERVER: ${{ vars.ALGOSEC_SERVER }}
+          ALGOSEC_USERNAME: ${{ vars.ALGOSEC_USERNAME }}
+          ALGOSEC_PASSWORD: ${{ secrets.ALGOSEC_PASSWORD }}
+        run: |
+          source venv/bin/activate
+          #./import_risk.py
+          echo "EXECUTA!"
