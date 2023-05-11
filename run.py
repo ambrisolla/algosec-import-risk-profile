@@ -151,7 +151,6 @@ if __name__ == '__main__':
     algosec = Algosec()
 
     # start session
-    print(' - starting session... ', end='\r')
     session = algosec.get_session_id()
     if session['succeeded'] == True:
         print(' - starting session... success')
@@ -160,7 +159,6 @@ if __name__ == '__main__':
         sys.exit(1)
 
     # import risk
-    print(' - importing risk... ', end='\r')
     import_risk = algosec.import_risk(session['session_id'])
     if import_risk['succeeded'] == True:
         print(' - importing risk... success')
@@ -169,7 +167,6 @@ if __name__ == '__main__':
         sys.exit(1)
 
     # close session
-    print(' - closing session... ', end='\r')
     close_session = algosec.close_session(session['session_id'])
     if close_session['succeeded'] == True:
         print(' - closing session... success')
