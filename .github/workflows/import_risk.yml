@@ -10,9 +10,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Create Python venv
-        run: python -m venv venv
-
+      - name: Create and activate Python venv
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+      
       - name: Teste
         run: echo $VIRTUAL_ENV
 
