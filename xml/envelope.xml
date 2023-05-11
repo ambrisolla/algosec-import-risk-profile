@@ -1,0 +1,8 @@
+<soapenv:Envelope
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:afa="https://www.algosec.com/afa-ws">
+    <soapenv:Header/>
+    <soapenv:Body>
+        __AFA__
+    </soapenv:Body>
+</soapenv:Envelope>

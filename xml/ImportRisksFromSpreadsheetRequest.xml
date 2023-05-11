@@ -1,0 +1,7 @@
+<afa:ImportRisksFromSpreadsheetRequest>
+  <SessionID>__SESSION_ID__</SessionID>
+  <RiskProfileName>__RISK_PROFILE_NAME__</RiskProfileName>
+  <ImportedFileType>__RISK_FILE_TYPE__</ImportedFileType>
+  <EncodedFileData>__ENCODED_FILE_DATA__</EncodedFileData>
+  <InheritStandard>0</InheritStandard>
+</afa:ImportRisksFromSpreadsheetRequest>

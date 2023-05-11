@@ -1,0 +1,4 @@
+<afa:ConnectRequest>
+  <UserName>__ALGOSEC_USERNAME__</UserName>
+  <Password>__ALGOSEC_PASSWORD__</Password>
+</afa:ConnectRequest>
