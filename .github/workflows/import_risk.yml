@@ -13,6 +13,9 @@ jobs:
       - name: Create Python venv
         run: python -m venv venv
 
+      - name: Teste
+        run: echo $VIRTUAL_ENV
+
       - name: Execute import
         env:
           ALGOSEC_SERVER: ${{ vars.ALGOSEC_SERVER }}
