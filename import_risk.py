@@ -66,6 +66,13 @@ class Algosec:
 
         files = [os.path.join('risk_profile', x)
                  for x in os.listdir('risk_profile')]
+        
+        if len(files) == 0:
+            return {
+                'succeeded': False,
+                'message' : 'There is no risk profile file available!'
+            }
+
         last_modified_file = max(files, key=os.path.getmtime)
 
         file_name = last_modified_file.split('/')[-1]
