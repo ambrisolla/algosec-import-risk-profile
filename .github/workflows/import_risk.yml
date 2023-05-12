@@ -1,4 +1,4 @@
-name: Import Algosec risk
+name: Import Algosec Risk
 on:
   push:
     branches: ["main"]
