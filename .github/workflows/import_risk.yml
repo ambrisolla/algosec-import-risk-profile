@@ -27,5 +27,4 @@ jobs:
           ALGOSEC_PASSWORD: ${{ secrets.ALGOSEC_PASSWORD }}
         run: |
           source venv/bin/activate
-          #./import_risk.py
-          echo "EXECUTA!"
+          ./import_risk.py
