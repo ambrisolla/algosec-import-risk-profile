@@ -1,11 +1,11 @@
 name: Import Algosec risk
 on:
-  pull_request:
+  push:
     branches: ["main"]
 
 jobs:
   import_risk:
-    if: github.event.pull_request.merged == true
+    
     name: Import risk
     runs-on: self-hosted
     environment: prod
